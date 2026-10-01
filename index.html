@@ -315,27 +315,28 @@
   .waitlist-status.success { color: #7A9B7E; }
   .waitlist-status.error { color: #B5574A; }
 
-  /* ---------- Footer ---------- */
+  /* ---------- Footer (option A: quiet & tidy) ---------- */
   footer {
     background: var(--cosmic-indigo);
-    color: var(--text-on-indigo-muted);
     text-align: center;
-    padding: 40px 24px;
-    font-size: 13px;
+    padding: 56px 24px 48px;
   }
-  footer a {
-    color: var(--text-on-indigo-secondary);
-    text-decoration: none;
-    margin: 0 12px;
-  }
-  footer a:hover { color: var(--text-on-indigo-primary); }
-  footer .logo { width: 72px; height: 72px; display: block; margin: 0 auto 8px; }
+  footer .logo { width: 64px; height: 64px; display: block; margin: 0 auto 10px; }
   footer .wordmark {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 22px;
     color: var(--text-on-indigo-primary);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
+  footer .links {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  footer .links a { color: var(--text-on-indigo-secondary); text-decoration: none; }
+  footer .links a:hover { color: var(--lunar-gold); }
+  footer .links .dot { color: var(--lunar-gold); margin: 0 12px; }
 
   @media (max-width: 640px) {
     section { padding: 64px 20px; }
@@ -455,9 +456,9 @@
 <footer>
   <img class="logo" src="data:image/webp;base64,UklGRu4RAABXRUJQVlA4IOIRAACwTACdASrAAMAAPlEijkSjoiGXCm0IOAUEsbdur2uY2HHg5wf+v85C5NtuPxDb3Cvm+857zg9+o3py0dtHfC/zMfAJS9wv80/Kv8b1xf3X66eTvAR/Kf6b/suFRAT9evP3nSLBtAT9Besh/qf+H/S+lr6z/9fuJfzf+5f9b1yvZP+zf//92P9YELTDrigguz+9e7ZVS//6F3w1BbWfiwZPaIeqNHXBMlIp+5obqwx8prM/N08Gk3Og8CpbVdWH9BlVAn31dbysNxD9aPUT7JyMQtnF2uTJ63WsNRfTAs2OPwyW/XJopBxx+48+bviA4C24R4xhUogcivHJCRNZ2WtyTTP+nDOeusbP0Yp6OS/bJE+HMPBCr0tmSQTD0rHsV5vrPqJR5Gaz3ZkhtzVU/YcRPRNG4ksD2y7w8w+3NrvYzApphO7I24r9jCpu3Q+7zEfw+aKS3/Wz+hEkGN/2DFNFQrxd4t94Gjr52uRMtbHmzqxOR//ZC0g65i90pwlvLq/WIlI5f+XkFZhapm2YelWxPz6AcnzYb3PwyeRiBmQc5hEYW37nfRSJl+bKUl4qLGbPF8lAlzpCuEl8j5QZ9YtfwIzvaSIPtCZQf4PKnvv3P/rgApd6CS0lVNvX5GYJdpaYbbIXjBnKyhAh2RQkFR8eOj19oyD6+LVTRFyVHRkzhepvy0+ec2NnhcC9Hu+XEg1zEyBlq1VxbHkL8AtY8kK019fOqZR25DCQeQ65jCx9jbaF9ctGSwTdOgFQj50fv9sTb1wMliSt57yy7QAVTOe0JZ3ZyF4ZGfbnSoMz/8D/+lgEgCGk7AVOcKRiDuvgAP7859/a0JNVRmOYAAAAr04uwXPWVngtVbosS3JFmYp4Lgk2ymgHbgiqRL9W3WP3v8IAPLa/DvbET9Gy2Y8AKDRpoxV1X0akwpTGYmHpC94wYlmrdgH4pyeiEYnd6jb6DyAfiKXIPojnn8xyslhYA7zJIoMAV5CA5XS1+koKPJLXqqaTTp+lKwyBsFyUWlsTjU5fE0LzLlJyVKUdTquZiYgRt3h5+MDsZTaKwLoHUI1ZbuH9UuT+NdZuBjpxR5RR7P6oaztLlHsVn+KcwzlT8V1az9RkoHUz3CAacXDkHyhNWgIYibZ9srMWY9/bkCDdtHVRd5oh4vH7+Jx8Y2bVjdEYEERTyW+CJxS2SkcyzhlOf4nDEqp+RDX+Qm43AQOFS9r8sgRPRoKHmA05Cl4cja8N+s+zzzEk1vzU7c9f/w7tuFfUAiho1YaeFIKay7wOz0RCHmUXzCz9FFve1gbKas7ICmr8VYIB4ZqJJ0UuUcJmY2pabhJyx5dYvDZCj9AAxB48HL5SKUuboKiaQH6vzqDY3l8hUc/2Oe/0RxU5EVzBO1YDf6pCoH9CbOfy0QIw8MW9T37NiYKHXTAaafai8yT3g2g4UcePGTDxMmS7Du56Rr2Qo28aK47Jk8c8qXmKK21zOjnoWGy4V4DRy6qNw1uzMIbZcUe3Fc28KYD+M/8ZIu2Rwn5IXJ10HKCGU55wcMBy2r7jI59T11lQxRnJ5g/W2JVzu9IIgGoNqZkNYSrbHIAz7DO6dkV/wv390yy3yHxEl2+MT5G59UrjP178NDVWWV0m9VIftwx/tip4vNSqSR3l99XJQqLsuLDDjSuHtbw4ZDOp3rKGRbYgrW2IkJ3agrqiywLWHwyakHohj1nBPXB0mpQtlMyggN7P1cjDEr5ulA6GT2aFzGMzB8gvtz3v5NCQTG4oY5hU0sFWNwFXGWXfYeTeG9KjcUgkrVs/oHPdvOnFPBDDvUbyFItGL6yNeZy7wuvUCfd4/VKR80V2d2I6sGiAWzZldE4wh7sD4w7fMQAsYcmBKW7UTycipJb5eOeUfU57hBQ6fvAYANSOUVXUG58ogLJuwKZKKbY1uxia5hhP4ITVZxLNbN4i2m8fIpWowpkEb80cav8+Cl9a5bvFVjWlIjeC8cOD4dUJrmzQjStUIsyniC/s1EbqGysoa1+mxh+DnBAbf7/mZGY1zXcbs/1sToQ2Zy3MRZP+mRrshCmKs/lqKiwD3tXv85fhdn6pSoihOaWdg2QPkUx2YSg6oxo4Pn/UruTWZFY243m3IDhibkUrIe/1H4rdCUx00OzZUEhpwkh2c3A28ZHIZe+aipl9PHtIDfsU+cehEJR2126wSkpoRuegC02RAomcZ2iTaA1EtLp7M5AWQkDEBPS8xr2IhQGHLtO4IPz+Ae3h0RYD//KkJyR/6FaIkiOk1zaf0FDZQNkMliFiVfPDbAy0wIG7V+VuXxG0Dzre/jgvu7dGs0U9Ja6V78DtxsRKeODdkR5jWKVQAxTVm/qdFaFYUvFIXlAyIIjjI8lduKQjZwxCSIJoN952x8ApYelQEHKhSJaRsx6e+kkHsuG/5WSZBoMZYHORMiNLP79T5vxCm4pPRB+sqGju0YJpuGSvtTnT5gmTGRT6VqgdvXWG+PLJIwb5JhT+Um8h7rto8uncWVgmSrV5RqkC6sPQgd63ENzB/Xxlgd7bTxRD6/CdVjKGVP5mgzx3sbpLPfqqaGalOIK2X5DYkU7prU+16a1IPkgindWiRCiE8c1k4EqtcuU1Wifkw4c6ixTmKigLmzLsrYZLTL2hdQTftnHR/NbxmF7w0QbC1hOTcH+EFZM1RZM7s3EPXDmJSuoHZAdPdbb9SIW5lwsO55ZHRfDWCYjDsZIyNqGyZ0rPoXnUUpWYcgVa4nPVwWdc+mpiu2HfkQbqEbW59tuAbXj64Vu+FjE2IMKEmt4P06RpBV6jgeWa5HRR/II8tvLNcyH6WiugHQwnADYjJgF2/mew4R6nl/d0TZ7/JetXuKH4Z3qvCfuEdrTgzjhxuszJlYAm3pUTA9DGFblf9YOiWYd9hlBa4PyAG4Enqp9PdAn3iiaRR43Z9LOSE75DYv+gP6P136PpODKxg4J+qJR1mJyO0ugltGm14moUgqbcYNK0hHS/J3BJ5+mkxA4XnmQTL+/Mcf0ZimpTOetoFYLWtjhO7pL5lvvKiZeOs2sikRRVINxEUMqEK30YeZ8e5B+TNLTFyGgB7oyg13pDIL4WdpNCJI9aM0A9uvaPIWZ7ZMvVyi9pxAGNTTTE7GYHZgPo4XX0EYBWY/Am0KzrqcykXf6Ql1jKGnqrmM0L5euRrSmPpBdESNN7v1xL8i0R7NfnVhnvFcDPUJPNfncjH7JtrgP0Vs0JpL3JGhmxZhWCVV9B5W+ciOaDVom/PPZ/BsHZ6EkPLeo7HPU9m3H2hFTLJW+X6I3iDz34rFx4QFXH6TaMiWZQ1pJ3mnJJStuJqYAVfemVVS2sfJVMu8ur9vuR+CQFK1WguwtUL3/XMcXM6XwmB7uVoy2GLeP02aw9i50eMAC6tOIKB8syPHidZW4PfgBmbaYDep8LIRqDxDNk3EJ7wSFgnpHnPgYycE6a9fwrflZvnxCD2cduhcbGqztaTwinbFdA5KhnKkERi4NORRR5EKKVXsLHejSFedMAi3te9MmCIArN7NobGh2kDqMG9N/dsGymuFfqYnzv+NP2mJbEpupELT+ynZUxW85WKfVN3ptO0ITgHUx6BtA9o3PjEEFY2r4G/36q/RMld6NeQKnzo8970t7/SjYeIFV4ma6OK4gfJ+DlbWFMW3h1Spv9QEJf/nQXPx8ekyOycGfvJ9zv/NPh7x4X9tIbm4abS6JqebW+eFmLLzRkaMkSMDcOGZqjD5gDEMDVe27ue6MUTysJgSGh9NMqIqnov38IDsKzwQaOt/9/nn+AN2xwfighU4oFwNTAnqSdNr6PMqHVN9OZrKs22ag+S5e5edtZhcEwW59MSB0fhquxZQTQnYDLP2Y7wKppIxOseWfX81s87MCuJRsPu5SAlAA2WL9qYoN6iWkmKjYibh2LI02WZ2b6niVrH6kU00mhrtPeq2fl0+fjc2Do0G5S2amKLv0n8qSO/ydpWlMbwnv550vd34e7so0q6ce1E2yeQ+EbNQKRIAabB4dfrA8jfPHaKgGm/E6BcWV+hj0Bw05cfhDEKa6njtKlR8t2/tstnmbsxwLo94po40psAIXsBWR6P4BljuvXOJrYQmZ1rpj0HheWXGuwtT6F7IdG2fK3VF9r/KppJZb8cgWAjx+C/WeprPCeGFWddBTOl4f+giDvvW2rFpn6BCpvd9P61GtmNfttU0aMxRdnSuB8uE+8V4EVOd8/+Omgri1At3LWCGJx5wBKSotDWJNCJlvXe3q31jxlUBYDu0f8orEN5JLlW74H5I1c55mlEV7kdAEZbFfIRav0CU36wHmxf5xQhDpeXnUBz6RT88dj2oK6816yypHCyWtV5dmtPfQjOs3FeImDaHE+aH3ueJR74InzQkZ0zxfXm80IorEkdtZv7VdxJxhgUoxDZS9KjWcUCVxSAEsFrDlo2bU5tjzUY9gJgENRiH3Fr7SiA4AqG7Bpw6fNAXUM+G/vKNQ4mmUAJW9bmZGnkbOIq1Myrt/H0o/r3kuHJeT03goffU4nvYHOibDf30apjW0LfjzY6dFW3LnDpIikm9XFnLBI40/Dv16UKnFCLsC16ZpHa4YPcFuQSFRRGqR0FTf6FB+JE5uRSKLibB9yVp7LRaDgCWrGygSI1qwW6lyWq/lKWBolKhd5B2iHj7/xL6gWLxwkwLBdr5Q9jK1Rlu06sfkVeyLSvfjgD3Uz2OagEkkso6fOEOJcxWHfVrJmc6cGMpbNrfiP8X3zq7Ln+tI37atQMAY9DE2zQbsbesO5aXrMVfrJwKsjRqmTI9wFFWhlgTOQ8t4IAUqY3CfJz7fwJ6top82OJlcFJf2i+gWg6mQ+cOHKgaj0K+5LVeoTD+xTnThuDT/Qb9jFj5YGEoAFw2MQ1DrCa2WFFS2GJtlKLsiG5danbFYZswADyhYUSdyknR6CrxOrrpGdoqv8/W3wWIm+BXN7o3WJVXeVhXe2aEWvj3HdGMotvtFARxZiX6QnIY3g7MxErlaD72QDwdPUaSrV8QBtEPDTBKbmpS1y6dbBz0Z9p0QiPsRn7FTyV2tfE8hQAhZ9vyKhAaawiA+3/IQsxtizX5dBCwOxWEYyucTCnVXv+cx6G+UnixMq6Ie1ljfqdCRyyBBBUspYVgHNQv/wyTxn33UYF3+4uVBz0iMtTmxtVyk9x+nhVj4unuDCG2QwGy0arDI/+BUj5mVV5pZwGkhaZmdPjpdBFZX+x0K/oyqDShFmmEfQNMOjE5+mF5BxwInPdGtk6Eu0Ceqf37P2VMXIKBdC+XJ4IwX9yMxBp3QFaLFURPV2MtRerERi2GMuR1nVY7LvUJnlG4FXpcivzk/cFA8u6UVUOF+vMSHDljeeCOj6mc5GZz5Nf9TApVa+FWNqCMdqu4vweWLoCscJs16l18MdLQfMZOWL0mMAFYaa3I2vS5BAJ5288Np4oXLnKsA3qriRzxnss4i82vpj4TER18IyCPvws3WM7ZJtqe3t/uogcLE9+KDTK2YNQOAos9lU01FkeaquaKN8jHk+t3xgfqtKYnlo4gDbhly4KECmxdKaVU5gUGqSkXoLsH16bt9HMd0lDPw8ZltBBkPEodmdMmSqM50etF4wfMrwr9xBIzzRd9Hqdr/l86o83Znudvsxo18fL9avBK71fT0Rh9lLNYda3pIom3AXFGWByjQNzjL9TDs3ltQuvixdtj0TuVpqFsWEOfiKxDSv8THQCDCNqoWNUNCa86WtEGwKPAAAgY4SZiz8TQKNTp/0Y/a3Ob5toOclgaSZK+hoCvurHdR6Tlu5IYGIDO6o+37+0qlVRmqmCMlvXkg8LCUHvFrlM4spyQzfKAHF/6ihiKzbsSc87VUxg6q8QFOc4izqVqakh7Qo/q3izpWuhMsLecV/3KBoftjVTrSr4t1brcwqSMG9ndLEy/Dsq9jG7MEgG1yc32fsTSH8Vj/drWEuntsxRJxtDfpqSkl2IvrhCrhlbz2tO+EY2n/1naL7KK1irid4JuWVwMeHYWflp0NVzpMHPmkLoI7aUzb94XlhLXHB8X0IDHZYFvr/mlyBzHAHnn/w/YcVQp6zA3mQhp7eHAB9B07y8/g852Qwf8CzYG7Jk9aUAAAAAAAAAAA=" alt="">
   <div class="wordmark">Moonkind</div>
-  <a href="/privacy-policy.html">Privacy Policy</a>
-  <a href="/support.html">Support</a>
-  <a href="mailto:moonkindapp@gmail.com">moonkindapp@gmail.com</a>
+  <nav class="links" aria-label="Footer">
+    <a href="/privacy-policy.html">Privacy</a><span class="dot" aria-hidden="true">&#10022;</span><a href="/support.html">Support</a><span class="dot" aria-hidden="true">&#10022;</span><a href="mailto:moonkindapp@gmail.com">Contact</a>
+  </nav>
 </footer>
 
 <script>
@@ -581,31 +582,47 @@
   })();
 
   // ---------- Ledger typewriter ----------
+  // Waits until the card is fully on screen and the visitor has paused on it,
+  // then types. If they scroll away before or after it finishes, it resets and
+  // plays again next time the card comes into view.
   const sampleEntry = "The tea was still warm when I finally sat down. That was enough.";
   const entryEl = document.getElementById('ledger-entry');
   const sealEl = document.getElementById('ledger-seal');
-  let typed = false;
+  let typeTimer = null, startTimer = null, played = false;
+
+  function resetEntry() {
+    clearInterval(typeTimer); clearTimeout(startTimer);
+    typeTimer = startTimer = null; played = false;
+    entryEl.innerHTML = '';
+    sealEl.classList.remove('visible');
+  }
 
   function typeEntry() {
-    if (typed) return;
-    typed = true;
+    played = true;
+    if (reduce) { entryEl.textContent = sampleEntry; sealEl.classList.add('visible'); return; }
     let i = 0;
     entryEl.innerHTML = '<span class="typed-cursor">&nbsp;</span>';
-    const interval = setInterval(() => {
+    typeTimer = setInterval(() => {
       i++;
       entryEl.innerHTML = sampleEntry.slice(0, i) + '<span class="typed-cursor">&nbsp;</span>';
       if (i >= sampleEntry.length) {
-        clearInterval(interval);
+        clearInterval(typeTimer); typeTimer = null;
         entryEl.textContent = sampleEntry;
-        setTimeout(() => sealEl.classList.add('visible'), 300);
+        setTimeout(() => sealEl.classList.add('visible'), 400);
       }
-    }, 35);
+    }, 55);
   }
 
-  const ledgerObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) typeEntry(); });
-  }, { threshold: 0.5 });
-  ledgerObserver.observe(document.getElementById('ledger-card'));
+  new IntersectionObserver(([entry]) => {
+    if (entry.intersectionRatio >= 0.95 && !played && !startTimer) {
+      startTimer = setTimeout(() => { startTimer = null; typeEntry(); }, 600);   // a beat to settle
+    } else if (entry.intersectionRatio < 0.95 && startTimer) {
+      clearTimeout(startTimer); startTimer = null;                              // scrolled on before it began
+    } else if (!entry.isIntersecting && played) {
+      resetEntry();                                                             // fully gone: replay next time
+    }
+  }, { threshold: [0, 0.95], rootMargin: '0px 0px -10% 0px' })
+    .observe(document.getElementById('ledger-card'));
 
   // ---------- Waitlist form ----------
   // Cloudflare Worker that saves waitlist signups (only accepts requests from moonkind.co).
